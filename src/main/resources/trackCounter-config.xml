@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:c="http://www.springframework.org/schema/c" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+        <util:list id="trackList">
+        <value>Money</value>
+        <value>Time</value>
+            <value>Otherside</value>
+            <value>The Wall</value>
+        </util:list>
+
+        <bean id="trackCounter"
+              class="com.decapitator.classes.TrackCounter"/>
+
+        <bean id="cd"
+              class="com.decapitator.classes.BlankDisc"
+                p:artist = "Pink Floyd"
+                p:title="The Dark Side of the Moon"
+                p:tracks-ref="trackList"/>
+
+    <aop:config>
+        <aop:aspect ref="trackCounter">
+            <aop:pointcut id="trackPlayed" expression="execution(* com.decapitator.interfaces.CompactDisc.playTrack(int)) and args(trackNumber)"/>
+            <aop:before
+                    pointcut-ref="trackPlayed"
+                    method="countTrack"/>
+        </aop:aspect>
+    </aop:config>
+</beans>

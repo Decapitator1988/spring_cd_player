@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p="http://www.springframework.org/schema/p"
-       xmlns:util="http://www.springframework.org/schema/util"
-       xmlns:c="http://www.springframework.org/schema/c"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="compactDisc"
-          class="com.decapitator.classes.BlankDisc"
-          c:_0="Otherside"
-          c:_1="Red hot chili peppers">
-        <constructor-arg>
-            <list>
-                <value>Money</value>
-                <value>Time</value>
-                <value>The Wall</value>
-            </list>
-        </constructor-arg>
-    </bean>
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+       <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+       <!--xmlns:p="http://www.springframework.org/schema/p"-->
+       <!--xmlns:util="http://www.springframework.org/schema/util"-->
+       <!--xmlns:c="http://www.springframework.org/schema/c"-->
+       <!--xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">-->
+    <!--<bean id="compactDisc"-->
+          <!--class="com.decapitator.classes.BlankDisc"-->
+          <!--p:title="DSOM"-->
+          <!--p:artist="Pink Floyd">-->
+          <!--<property name="tracks">-->
+              <!--<list>-->
+                  <!--<value>Some</value>-->
+                  <!--<value>Thing</value>-->
+              <!--</list>-->
+          <!--</property>-->
+    <!--</bean>-->
 
-</beans>
+<!--</beans>-->
